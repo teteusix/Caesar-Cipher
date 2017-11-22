@@ -1,21 +1,26 @@
 var alphabetum = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var encrypted = ['d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c'];
-var normalText = document.getElementById('normalText');
-var btnEncrypt = document.getElementById('encrypt');
-var arrText =[];
+var userText = document.getElementById('userText');
+var btnToEncrypt = document.getElementById('encrypt');
+var arrUserText =[];
 
-vNormalText = normalText.value;
-
+// CHANGE THE USER WORD (STRING) TO AN ARRAY
 function changeStringToArray() {
-    var str = vNormalText;
+    var str = userText.value;
     var res = str.split('');
-    arrText = res;
-    console.log(arrText);
+    arrUserText = res;
+    console.log(arrUserText);
     return res;
 }
 
 changeStringToArray();
 
-
-
-var pos = alphabetum.indexOf('t');
+// THE MAGIC IS HERE! HERE ENCRYPT THE USER'S WORD
+for (var i = 0; i < arrUserText.length; i++) {
+  arrUserText[i];
+  var word_e = arrUserText[i];
+  var posAlpha = alphabetum.indexOf(word_e);
+  var posEncry = encrypted[posAlpha];
+  document.getElementById('temp').innerHTML += '<li><strong>'+word_e+'</strong> é <strong>'+encrypted[posAlpha]+'</strong></li>';
+  document.getElementById('palavra').innerHTML += encrypted[posAlpha];
+}
